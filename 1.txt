@@ -1,0 +1,166 @@
+pipeline {
+    agent any
+    environment {
+        def time =  new Date().format('yyyyMMddHHmmss')
+        def adir = "projecta"
+        def bdir = "projectb"
+        def helmDir = "helm"
+        def agiturl = "https://github.com/yylstudy/spring-boot-demo1.git"
+        def bgiturl = "https://github.com/yylstudy/soring-boot-demo2-github.git"
+        def helmurl = "https://github.com/yylstudy/helmgithub.git"
+    }
+    stages {
+		stage('checkout'){
+            steps{
+                script {
+					 dir(adir){
+						git  credentialsId: 'yyl', url: agiturl,branch:"${branch}"
+					}
+					dir(bdir){
+						git  credentialsId: 'yyl', url: bgiturl,branch:"${branch}"
+					}
+					dir(helmDir){
+						 git  credentialsId: 'yyl', url: helmurl,branch:"master"
+					}
+
+				}
+            }
+
+        }
+        stage('parallel Stage') {
+            parallel {
+                stage('demo1') {
+                    when {
+                        branch 'production'
+                    }
+                    stages {
+                        stage('build demo1') {
+                            steps {
+                                script {
+                                    dir(adir){
+                                        sh """
+                                        mvn clean install
+                                        rm -rf demo1
+                                        mkdir demo1
+                                        cp Dockerfile demo1/
+                                        cp target/sprint-boot-demo1-0.0.1-SNAPSHOT.jar demo1/
+                                        """
+                                        docker.build("demo1:v1_${time}", "demo1/")
+                                        sh "docker tag demo1:v1_${time} demo1:v1_delay_${time}"
+										sh """
+										docker login --username=杨永练 --password=yyl18255380339... registry.cn-hangzhou.aliyuncs.com
+										docker tag demo1:v1_${time} registry.cn-hangzhou.aliyuncs.com/yyl_test/demo1:v1_${time}
+										docker push registry.cn-hangzhou.aliyuncs.com/yyl_test/demo1:v1_${time}
+										"""
+                                    }
+                                }
+                            }
+                        }
+						stage('update demo1 chart') {
+                            steps {
+                                script {
+                                    dir(helmDir){
+                                        sh """
+										 sed -i '9c \\  tag: v1_${time}' charts/demo/values.yaml
+										 sed -i '32c \\          args: [\"--spring.profiles.active=${profile}\"]' charts/demo/templates/deployment.yaml
+										 git add charts/demo/values.yaml
+										 git add charts/demo/templates/deployment.yaml
+										 """
+                                    }
+                                }
+                            }
+                        }
+						stage('deploy demo1') {
+                            steps {
+                                script {
+                                    dir(helmDir){
+                                        sh "helm upgrade  demo1 charts/demo"
+                                    }
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+                stage('demo2') {
+                    when {
+                        branch 'production'
+                    }
+                    stages {
+                        stage('build demo2') {
+                            steps {
+                                script {
+                                    dir(bdir){
+                                        sh """
+                                        mvn clean install
+                                        rm -rf demo2
+                                        mkdir demo2
+                                        cp Dockerfile demo2/
+                                        cp target/spring-boot-demo2-1.0-SNAPSHOT.jar demo2/
+                                        """
+                                        docker.build("demo2:v1_${time}", "demo2/")
+                                        sh "docker tag demo2:v1_${time} demo2:v1_delay_${time}"
+										sh """
+										docker login --username=杨永练 --password=yyl18255380339... registry.cn-hangzhou.aliyuncs.com
+										docker tag demo2:v1_${time} registry.cn-hangzhou.aliyuncs.com/yyl_test/demo2:v1_${time}
+										docker push registry.cn-hangzhou.aliyuncs.com/yyl_test/demo2:v1_${time}
+										"""
+                                    }
+                                }
+                            }
+                        }
+						stage('update demo2 chart') {
+                            steps {
+                                script {
+                                    dir(helmDir){
+                                         sh """
+										 sed -i '9c \\  tag: v1_${time}' charts/demo2/values.yaml
+										 sed -i '32c \\          args: [\"--spring.profiles.active=${profile}\"]' charts/demo2/templates/deployment.yaml
+										 git add charts/demo2/values.yaml
+										 git add charts/demo2/templates/deployment.yaml
+										 """
+                                    }
+                                }
+                            }
+                        }
+						stage('deploy demo2') {
+                            steps {
+                                script {
+                                    dir(helmDir){
+                                        sh "helm upgrade  demo2 charts/demo2"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+		stage('commit charts'){
+            steps{
+                script {
+                 dir(helmDir){
+                     sh """
+                     git commit -m '镜像升级'
+                     git push origin HEAD:refs/heads/master
+                     """
+                    }
+                }
+            }
+        }
+        stage('确定是否发布prod环境'){
+            steps{
+                input 'Do you approve deployment?'
+                echo '发布prod成功'
+            }
+        }
+        stage('rancher:https://11.165.73.10/'){
+            steps{
+                echo 'i am deployment'
+            }
+        }
+
+
+    }
+}
