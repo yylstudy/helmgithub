@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: demo2
-  tag: v1_20200422111633
+  tag: registry.cn-hangzhou.aliyuncs.com/yyl_test/demo2:v1_20200422162715
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
