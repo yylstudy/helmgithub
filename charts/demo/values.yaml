@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: demo1
-  tag: v1_20200422111349
+  tag: v1_20200422111633
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
