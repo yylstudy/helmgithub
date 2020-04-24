@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44fa144f-8d2a-4b24-acbf-262f8d0a08ef" name="Default Changelist" comment="" />
+    <list default="true" id="44fa144f-8d2a-4b24-acbf-262f8d0a08ef" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,19 +21,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/4.txt">
+        <entry file="file://$PROJECT_DIR$/9.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="226" column="32" lean-forward="true" selection-start-line="226" selection-start-column="32" selection-end-line="237" selection-end-column="33" />
+            <state relative-caret-position="-60">
+              <caret line="201" column="74" selection-start-line="201" selection-start-column="66" selection-end-line="201" selection-end-column="74" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/9.groovy">
+        <entry file="file://$PROJECT_DIR$/11.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="176" column="48" selection-start-line="176" selection-start-column="48" selection-end-line="176" selection-end-column="48" />
+            <state relative-caret-position="280">
+              <caret line="262" column="33" lean-forward="true" selection-start-line="262" selection-start-column="33" selection-end-line="262" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -40,8 +42,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>docker tag</find>
-      <find>version</find>
       <find>fileExists</find>
       <find>true</find>
       <find>sh &quot;&quot;&quot;</find>
@@ -49,7 +49,6 @@
       <find>helm</find>
       <find>bgiturl</find>
       <find>agiturl</find>
-      <find>aoldversion</find>
       <find>ansiColor</find>
       <find>disableConcurrentBuilds</find>
       <find>workspace</find>
@@ -62,6 +61,16 @@
       <find>sprint-boot-demo1</find>
       <find>branch</find>
       <find>aexists</find>
+      <find>registry.cn-hangzhou.aliyuncs.com/yyl_test</find>
+      <find>index</find>
+      <find>change</find>
+      <find>demo1</find>
+      <find>urls</find>
+      <find>stage</find>
+      <find>aoldversion</find>
+      <find>when</find>
+      <find>changes</find>
+      <find>dir</find>
       <find>helmDir</find>
     </findStrings>
   </component>
@@ -78,12 +87,14 @@
         <option value="$PROJECT_DIR$/charts-prod/demo2/values.yaml" />
         <option value="$PROJECT_DIR$/2.txt" />
         <option value="$PROJECT_DIR$/3.txt" />
-        <option value="$PROJECT_DIR$/4.txt" />
         <option value="$PROJECT_DIR$/5.txt" />
         <option value="$PROJECT_DIR$/7.groovy" />
         <option value="$PROJECT_DIR$/6.groovy" />
         <option value="$PROJECT_DIR$/8.groovy" />
+        <option value="$PROJECT_DIR$/4.txt" />
         <option value="$PROJECT_DIR$/9.groovy" />
+        <option value="$PROJECT_DIR$/10.groovy" />
+        <option value="$PROJECT_DIR$/11.groovy" />
       </list>
     </option>
   </component>
@@ -98,8 +109,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -107,15 +116,12 @@
               <item name="helmgithub" type="b2602c69:ProjectViewProjectNode" />
               <item name="helmgithub" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="helmgithub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="helmgithub" type="462c0819:PsiDirectoryNode" />
-              <item name="charts" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -125,16 +131,18 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/charts-prod/1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sprint-boot-demo-github" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\yyl\helmgithub" />
+      <recent name="D:\code\yyl\helmgithub\charts-prod\1" />
+      <recent name="D:\code\yyl\helmgithub\charts-prod\0" />
       <recent name="D:\code\yyl\helmgithub\charts\1" />
       <recent name="D:\code\yyl\helmgithub\charts\0" />
-      <recent name="D:\code\yyl\helmgithub" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -160,7 +168,9 @@
       <option name="presentableId" value="Default" />
       <updated>1587548172710</updated>
       <workItem from="1587548174583" duration="18832000" />
-      <workItem from="1587604913167" duration="21891000" />
+      <workItem from="1587604913167" duration="26132000" />
+      <workItem from="1587639798481" duration="3609000" />
+      <workItem from="1587691675260" duration="2516000" />
     </task>
     <task id="LOCAL-00001" summary="ss">
       <created>1587548238426</created>
@@ -197,17 +207,30 @@
       <option name="project" value="LOCAL" />
       <updated>1587633397778</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ss">
+      <created>1587635601537</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587635601537</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ss">
+      <created>1587635622390</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587635622390</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40723000" />
+    <option name="totallyTimeSpent" value="51089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.050121263" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.051738076" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -245,34 +268,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="ss" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/charts/demo2/values.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/charts/demo/values.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/charts-prod/demo/values.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="67" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/charts-prod/demo2/values.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/charts/demo2/values.yaml" />
+    <entry file="file://$PROJECT_DIR$/charts/demo/values.yaml" />
+    <entry file="file://$PROJECT_DIR$/charts-prod/demo/values.yaml" />
+    <entry file="file://$PROJECT_DIR$/charts-prod/demo2/values.yaml" />
     <entry file="file://$PROJECT_DIR$/1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
@@ -280,9 +279,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/charts-prod/demo/templates/tests/test-connection.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/charts-prod/demo/templates/tests/test-connection.yaml" />
     <entry file="file://$PROJECT_DIR$/2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -310,13 +307,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/8.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/6.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -331,17 +321,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/charts-prod/0/templates/tests/test-connection.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/charts-prod/1/templates/tests/test-connection.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="14" column="13" lean-forward="true" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/4.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="226" column="32" lean-forward="true" selection-start-line="226" selection-start-column="32" selection-end-line="237" selection-end-column="33" />
+          <caret line="28" column="26" lean-forward="true" selection-end-line="298" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1239">
+          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/9.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="176" column="48" selection-start-line="176" selection-start-column="48" selection-end-line="176" selection-end-column="48" />
+        <state relative-caret-position="-60">
+          <caret line="201" column="74" selection-start-line="201" selection-start-column="66" selection-end-line="201" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="262" column="33" lean-forward="true" selection-start-line="262" selection-start-column="33" selection-end-line="262" selection-end-column="33" />
         </state>
       </provider>
     </entry>
